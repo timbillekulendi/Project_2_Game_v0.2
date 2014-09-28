@@ -1,5 +1,11 @@
 <!Doctype html>
 <html>
+<!-- 
+	Timbille Kulendi
+	 28 September, 2014
+	 Introduction to Programming
+	 Project 1 - My First Web Page 
+-->
 	<head>
 		<title>
 			Text Adventure Game
@@ -7,19 +13,26 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<a href="mailto:timbille.kulendi1@marist.edu"> Click to contact me in the case of any prblems</a>
 		<script type="text/javascript">
-			 function btnNorth_Click() {
-			 var 
-			 
-			 } 
-			function btnSouth_Click() {
-			 
-			 }
-			 function btnEast_Click() {
-			 
-			 }
-			function btnWest_Click() {
-			 
-			 }	
+			function btnNorth_click() {
+				var message = "Hello, world.";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value += message;
+		}
+			function btnSouth_click() {
+				var message = "Hello, moon.";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value += message;
+		}
+			function btnEast_click() {
+				var message = "Hello, stars.";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value += message;
+		}
+			function btnWest_click() {
+				var message = "Hello, sun.";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value += message;
+		}
 		</script>
 	</head>
 	<body>
@@ -33,29 +46,30 @@
 			  	  name="taMain"> I have nothing to start the game with now
 		</textarea>
 		<br>
-		<input type="button"
-			   id="btnNorth"
-			   name="btnNorth"
-			   value="North" 
-			   onclick"btnNorth_Click();/>
 		
+		 <input type="button"
+             id = "btnNorth"
+             name="btnNorth"
+             value="North"
+             onclick="btnNorth_click();" />
+             
 		<input type="button"
-			   id="btnSouth"
-			   name="btnSouth"
-			   value="South"
-			   onclick"btnSouth_Click(); />
-		
-		<input type="button"
-			   id="btnEast"
-			   name="btnEast"
-			   value="East"
-			   onclick"btnEast_Click(); />
-		
-		<input type="button"
-			   id="btnWest"
-			   name="btnWest"
-			   value="West" 
-			   onclick"btnWest_Click();/>
+             id = "btnSouth"
+             name="btnSouth"
+             value="South"
+             onclick="btnSouth_click();" />
+             
+        <input type="button"
+             id = "btnEast"
+             name="btnEast"
+             value="East"
+             onclick="btnEast_click();" />
+             
+        <input type="button"
+             id = "btnWest"
+             name="btnWest"
+             value="West"
+             onclick="btnWest_click();" />
 			   
 			
 	</body>
