@@ -10,28 +10,165 @@
 		<title>
 			Text Adventure Game
 		</title>
+		<style>
+			body {text-align:center;background-color:black;color:#FFFFFF}
+		</style>
+		
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<a href="mailto:timbille.kulendi1@marist.edu"> Click to contact me in the case of any prblems</a>
+		<a href="mailto:timbille.kulendi1@marist.edu"> Click to contact me in the case of any problems</a>
 		<script type="text/javascript">
+		var loc0 = "Lobby";
+		var loc1 = "Bathroom";
+		var loc2 = "Bedroom";
+		var loc3 = "Balcony";
+		var loc4 = "Kitchen";
+		var currLoc = loc0;
+		var loc0_visited = false;
+		var loc1_visited = false;
+		var loc2_visited = false;
+		var loc3_visited = false;
+		var loc4_visited = false;
+		var points = 0;
+		var message = ""; 
+			
 			function btnNorth_click() {
-				var message = "Hello, world.";
+				var loc_text = document.getElementById("txtLocation");
+				var score_text = document.getElementById("txtscore");
+				if (currLoc === loc0) {
+					currLoc = loc4;
+					if (loc4_visited === false) {
+						loc4_visited = true;
+						points += 5;
+					} 	
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou moved into the kitchen.\n\n";
 				var targetTextArea = document.getElementById("taMain");
-			    targetTextArea.value += message;
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else if (currLoc === loc1) {
+						 currLoc = loc0;
+						 if (loc0_visited === false) {
+							 loc0_visited = true;
+							 points += 5;
+				
+					}
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou're back in the lobby.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else { 
+				message = "\nYou can't go there.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
 		}
 			function btnSouth_click() {
-				var message = "Hello, moon.";
+				var loc_text = document.getElementById("txtLocation");
+				var score_text = document.getElementById("txtscore");
+				if (currLoc === loc0) {
+					currLoc = loc1;
+					if (loc1_visited === false) {
+						loc1_visited = true;
+						points += 5;
+					} 	
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou're in the bathroom, yaay!\n\n";
 				var targetTextArea = document.getElementById("taMain");
-			    targetTextArea.value += message;
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else if (currLoc === loc4) {
+						 currLoc = loc0;
+						 if (loc0_visited === false) {
+							 loc0_visited = true;
+							 points += 5;
+				
+					}
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou're back in the lobby.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else { 
+				message = "\nYou can't go there.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+		
 		}
 			function btnEast_click() {
-				var message = "Hello, stars.";
+				var loc_text = document.getElementById("txtLocation");
+				var score_text = document.getElementById("txtscore");
+				if (currLoc === loc0) {
+					currLoc = loc3;
+					if (loc3_visited === false) {
+						loc3_visited = true;
+						points += 5;
+					} 	
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou've moved to the balcony, lots of fresh air.\n\n";
 				var targetTextArea = document.getElementById("taMain");
-			    targetTextArea.value += message;
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else if (currLoc === loc2) {
+						 currLoc = loc0;
+						 if (loc0_visited === false) {
+							 loc0_visited = true;
+							 points += 5;
+				
+					}
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou're back in the lobby.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else { 
+				message = "\nYou can't go there.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+		
 		}
 			function btnWest_click() {
-				var message = "Hello, sun.";
+				var loc_text = document.getElementById("txtLocation");
+				var score_text = document.getElementById("txtscore");
+				if (currLoc === loc0) {
+					currLoc = loc2;
+					if (loc2_visited === false) {
+						loc2_visited = true;
+						points += 5;
+					} 	
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou're up for some hot s**, wink wink!\n\n";
 				var targetTextArea = document.getElementById("taMain");
-			    targetTextArea.value += message;
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else if (currLoc === loc3) {
+						 currLoc = loc0;
+						 if (loc0_visited === false) {
+							 loc0_visited = true;
+							 points += 5;
+				
+					}
+				loc_text.value = currLoc;
+				score_text.value = points;		 
+				message = "\nYou're back in the lobby.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				else { 
+				message = "\nYou can't go there.\n\n";
+				var targetTextArea = document.getElementById("taMain");
+			    targetTextArea.value = message + targetTextArea.value;
+			}
+				
 		}
 		</script>
 	</head>
@@ -40,11 +177,15 @@
 			Text Adventure Game
 		</h1>
 		<br>
-		<textarea row="32"
-				  cols="32"
+			Current Location <input type="text"
+                                    id = "txtLocation"
+                                    name="txtLocation"
+                                    value = "Lobby"/>
+		<br>
+		
+		<textarea style="width:350px;height:100px"
 				  id="taMain"
-			  	  name="taMain"> I have nothing to start the game with now
-		</textarea>
+			  	  name="taMain"> I have nothing to start the game with now.  </textarea>
 		<br>
 		
 		 <input type="button"
@@ -70,6 +211,12 @@
              name="btnWest"
              value="West"
              onclick="btnWest_click();" />
+    	<br>
+    	<br>
+    	
+    	Score <input type="text"
+                     id = "txtscore"
+                     name="txtscore"/>
 			   
 			
 	</body>
