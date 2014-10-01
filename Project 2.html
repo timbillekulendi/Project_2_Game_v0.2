@@ -8,20 +8,20 @@
 -->
 	<head>
 		<title>
-			Text Adventure Game
+			Maze Sprinter 
 		</title>
 		<style>
-			body {text-align:center;background-color:black;color:#FFFFFF}
+			body {text-align:center;background-color:#800000;color:#FFFF00;font-family:Impact}
 		</style>
 		
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<a href="mailto:timbille.kulendi1@marist.edu"> Click to contact me in the case of any problems</a>
+		<a href="mailto:timbille.kulendi1@marist.edu"> Click here for help</a>
 		<script type="text/javascript">
-		var loc0 = "Lobby";
-		var loc1 = "Bathroom";
-		var loc2 = "Bedroom";
-		var loc3 = "Balcony";
-		var loc4 = "Kitchen";
+		var loc0 = "The Glade";
+		var loc1 = "Sector 1";
+		var loc2 = "Sector 2";
+		var loc3 = "sector 3";
+		var loc4 = "Sector 4";
 		var currLoc = loc0;
 		var loc0_visited = false;
 		var loc1_visited = false;
@@ -42,7 +42,7 @@
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou moved into the kitchen.\n\n";
+				message = "\nYou've been going through the maze for hours and end up in Thornhill, an enormous unkept plantation full of venomous plants.\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -55,12 +55,12 @@
 					}
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou're back in the lobby.\n\n";
+				message = "\nYou have no option left and run back to the Glades.\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else { 
-				message = "\nYou can't go there.\n\n";
+				message = "\n😂You can't go there!! *Evil Laugh*😂\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -76,7 +76,7 @@
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou're in the bathroom, yaay!\n\n";
+				message = "\nThe night sky begins to dawn, you begin to hear the long doleful cry of the Grievers fill the air. You don't want to end up one on one with a Griever. You still have time to save yourself!\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -89,12 +89,12 @@
 					}
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou're back in the lobby.\n\n";
+				message = "\nYou have no option left and run back to the Glades.\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else { 
-				message = "\nYou can't go there.\n\n";
+				message = "\n😂You can't go there!! *Evil Laugh*😂\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -111,7 +111,7 @@
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou've moved to the balcony, lots of fresh air.\n\n";
+				message = "\nYou are moving quickly towards what appears to be a opening to a whole new sector which could lead to the exit point of the maze. There is a sudden force restraining you from moving any further, You realise you are stuck in quick sand and need to work something out fast before you are completely submerged. Luckily you grab hold of some vines and pull yourself to safety. Luck seems to be on your side.\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -124,12 +124,12 @@
 					}
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou're back in the lobby.\n\n";
+				message = "\nYou have no option left and run back to the Glades.\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else { 
-				message = "\nYou can't go there.\n\n";
+				message = "\n😂You can't go there!! *Evil Laugh*😂\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -146,7 +146,7 @@
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou're up for some hot s**, wink wink!\n\n";
+				message = "\nIt is deep into the night and you are still desperately trying to solve the maze in spite of the roaming Grievers. Tired, you sit just to rest your muscles a little. While enjoying the rest, you suddenly get that feeling that someone is behing you. Instinctively you turn around quickly to see a Griever looking at you right in the eyeballs, just inches away. Is this the end for you?\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -159,12 +159,12 @@
 					}
 				loc_text.value = currLoc;
 				score_text.value = points;		 
-				message = "\nYou're back in the lobby.\n\n";
+				message = "\nYou have no option left and run back to the Glades.\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else { 
-				message = "\nYou can't go there.\n\n";
+				message = "\n😂You can't go there!! *Evil Laugh*😂\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
@@ -174,18 +174,22 @@
 	</head>
 	<body>
 		<h1>
-			Text Adventure Game
+			The Maze Sprinter 
 		</h1>
 		<br>
 			Current Location <input type="text"
                                     id = "txtLocation"
                                     name="txtLocation"
-                                    value = "Lobby"/>
+                                    value = "The Glade"/>
 		<br>
 		
-		<textarea style="width:350px;height:100px"
+		<textarea style="width:500px;height:300px;font-family:monospace;font-size:100%"
 				  id="taMain"
-			  	  name="taMain"> I have nothing to start the game with now.  </textarea>
+			  	  name="taMain">You awake unconscious in the Glade, a square shaped land mass surrounded by towering walls, with no memories except for your name. Within the glades is a whole community on its own with the little population calling themselves Gladers. You are told by the Gladers that the Glade is surrounded by a gigantic mechanical maze with mechanical creatures referred to as Grievers roaming at night. 
+
+Every day when the gates open a group of two go out mapping the maze which changes its pattern every night trying to solve the maze, a task they have been trying to complete for two years. Supplies are brought to the Glade every week; whereas a new boy is sent through an elevator called the Box once every month (that's how you end up here). The day after you arrive in the Glade, a girl is sent with a message that "this is the last one ever", meaning unless the Gladers could find a way out of the Glade fast enough they would all die! That night, the gates leading out to the maze do not close and the Grievers make their way into the Glades killing a majority of the Gladers before retreating back into the maze. You are now being blamed for all this misfortune and have the task of solving the maze before anyone else is killed. 
+
+Use the directional buttons below to navigate about the Glades. The destiny of the remaining Gladers is in your grasps. May the odds be in your favour    </textarea>
 		<br>
 		
 		 <input type="button"
@@ -199,18 +203,18 @@
              name="btnSouth"
              value="South"
              onclick="btnSouth_click();" />
-             
-        <input type="button"
-             id = "btnEast"
-             name="btnEast"
-             value="East"
-             onclick="btnEast_click();" />
-             
+              
         <input type="button"
              id = "btnWest"
              name="btnWest"
              value="West"
              onclick="btnWest_click();" />
+             
+              <input type="button"
+             id = "btnEast"
+             name="btnEast"
+             value="East"
+             onclick="btnEast_click();" />
     	<br>
     	<br>
     	
