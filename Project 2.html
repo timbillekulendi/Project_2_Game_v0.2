@@ -23,32 +23,32 @@
 		var loc3 = "sector 3";
 		var loc4 = "Sector 4";
 		var currLoc = loc0;
-		var loc0_visited = false;
-		var loc1_visited = false;
-		var loc2_visited = false;
-		var loc3_visited = false;
-		var loc4_visited = false;
-		var points = 0;
-		var message = ""; 
+		var loc0_visited = false; //Global variable to determine whether player has been in loc0.
+		var loc1_visited = false; //Global variable to determine whether player has been in loc1.
+		var loc2_visited = false; //Global variable to determine whether player has been in loc2.
+		var loc3_visited = false; //Global variable to determine whether player has been in loc3.
+		var loc4_visited = false; //Global variable to determine whether player has been in loc4.
+		var points = 0; //For score of player
+		var message = ""; //Global variable to display message for each button function.
 			
-			function btnNorth_click() {
+			function btnNorth_click() { //This allows the player to go north when possible.
 				var loc_text = document.getElementById("txtLocation");
 				var score_text = document.getElementById("txtscore");
-				if (currLoc === loc0) {
+				if (currLoc === loc0) { //If the players current location is loc0, moving north would change their location to loc4.
 					currLoc = loc4;
-					if (loc4_visited === false) {
+					if (loc4_visited === false) { //If player visits loc4 for first time changes from false to true and adds a score of 5 to players score.
 						loc4_visited = true;
 						points += 5;
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
 				message = "\nYou've been going through the maze for hours and end up in Thornhill, an enormous unkept plantation full of venomous plants.\n\n\n\n\n";
-				var targetTextArea = document.getElementById("taMain");
+				var targetTextArea = document.getElementById("taMain"); //Displays above message in text area when player moves north into loc4
 			    targetTextArea.value = message + targetTextArea.value;
 			}
-				else if (currLoc === loc1) {
+				else if (currLoc === loc1) { //If the players current location is loc1, moving north would change their location to loc1.
 						 currLoc = loc0;
-						 if (loc0_visited === false) {
+						 if (loc0_visited === false) { //If player visits loc0 for first time changes from false to true and adds a score of 5 to players score.
 							 loc0_visited = true;
 							 points += 5;
 				
@@ -56,28 +56,28 @@
 				loc_text.value = currLoc;
 				score_text.value = points;		 
 				message = "\nYou have no option left and run back to the Glades.\n\n\n\n\n";
-				var targetTextArea = document.getElementById("taMain");
+				var targetTextArea = document.getElementById("taMain"); //Displays above message in text area when player moves north into loc4.
 			    targetTextArea.value = message + targetTextArea.value;
 			}
-				else { 
+				else { //If there is no path to go north, message below is displayed.
 				message = "\nYou can't go there!! *Evil Laugh*\n\n\n\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 		}
-			function btnSouth_click() {
+			function btnSouth_click() { //This allows the player to go south when possible.
 				var loc_text = document.getElementById("txtLocation");
 				var score_text = document.getElementById("txtscore");
-				if (currLoc === loc0) {
+				if (currLoc === loc0) { //If the players current location is loc0, moving north would change their location to loc1.
 					currLoc = loc1;
-					if (loc1_visited === false) {
+					if (loc1_visited === false) { //If player visits loc1 for first time changes from false to true and adds a score of 5 to players score.
 						loc1_visited = true;
 						points += 5;
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
 				message = "\nThe night sky begins to dawn, you begin to hear the long doleful cry of the Grievers fill the air. You don't want to end up one on one with a Griever. You still have time to save yourself!\n\n\n\n\n";
-				var targetTextArea = document.getElementById("taMain");
+				var targetTextArea = document.getElementById("taMain"); //Displays above message in text area when player moves north into loc1
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else if (currLoc === loc4) {
@@ -93,26 +93,26 @@
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
-				else { 
+				else { //If there is no path to go south, message below is displayed
 				message = "\nYou can't go there!! *Evil Laugh*\n\n\n\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 		
 		}
-			function btnEast_click() {
+			function btnEast_click() { //This allows the player to go east when possible.
 				var loc_text = document.getElementById("txtLocation");
 				var score_text = document.getElementById("txtscore");
-				if (currLoc === loc0) {
+				if (currLoc === loc0) { //If the players current location is loc0, moving north would change their location to loc3.
 					currLoc = loc3;
-					if (loc3_visited === false) {
+					if (loc3_visited === false) { //If player visits loc3 for first time changes from false to true and adds a score of 5 to players score.
 						loc3_visited = true;
 						points += 5;
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
 				message = "\nYou are moving quickly towards what appears to be a opening to a whole new sector which could lead to the exit point of the maze. There is a sudden force restraining you from moving any further, You realise you are stuck in quick sand and need to work something out fast before you are completely submerged. Luckily you grab hold of some vines and pull yourself to safety. Luck seems to be on your side.\n\n\n\n\n";
-				var targetTextArea = document.getElementById("taMain");
+				var targetTextArea = document.getElementById("taMain"); //Displays above message in text area when player moves north into loc3
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else if (currLoc === loc2) {
@@ -128,26 +128,26 @@
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
-				else { 
+				else { //If there is no path to go east, message below is displayed
 				message = "\nYou can't go there!! *Evil Laugh*\n\n\n\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 		
 		}
-			function btnWest_click() {
+			function btnWest_click() { //This allows the player to go west when possible.
 				var loc_text = document.getElementById("txtLocation");
 				var score_text = document.getElementById("txtscore");
-				if (currLoc === loc0) {
+				if (currLoc === loc0) { //If the players current location is loc0, moving north would change their location to loc2.
 					currLoc = loc2;
-					if (loc2_visited === false) {
+					if (loc2_visited === false) { //If player visits loc2 for first time changes from false to true and adds a score of 5 to players score.
 						loc2_visited = true;
 						points += 5;
 					} 	
 				loc_text.value = currLoc;
 				score_text.value = points;		 
 				message = "\nIt is deep into the night and you are still desperately trying to solve the maze in spite of the roaming Grievers. Tired, you sit just to rest your muscles a little. While enjoying the rest, you suddenly get that feeling that someone is behing you. Instinctively you turn around quickly to see a Griever looking at you right in the eyeballs, just inches away. Is this the end for you?\n\n\n\n\n";
-				var targetTextArea = document.getElementById("taMain");
+				var targetTextArea = document.getElementById("taMain"); //Displays above message in text area when player moves north into loc2
 			    targetTextArea.value = message + targetTextArea.value;
 			}
 				else if (currLoc === loc3) {
@@ -163,7 +163,7 @@
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
 			}
-				else { 
+				else { //If there is no path to go west, message below is displayed
 				message = "\nYou can't go there!! *Evil Laugh*\n\n\n\n\n";
 				var targetTextArea = document.getElementById("taMain");
 			    targetTextArea.value = message + targetTextArea.value;
